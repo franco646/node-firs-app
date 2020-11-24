@@ -1,0 +1,15 @@
+{{#if hayProductos}}
+<ul>
+    {{#each products as |product|}}
+    <li>
+        <p>({{product.cantidad}}){{product.productData.nombre}}</p>
+        <form action="/delete-cart-product" method="POST">
+            <button type="submit" class="btn"> Borrar</button>
+            <input type="hidden" name="cartProduct" value="{{product.productData.id}}">
+        </form>
+    </li>
+    {{/each}}
+</ul>
+{{else}}
+<h1>No hay ningun producto en el carrito</h1>
+{{/if}}

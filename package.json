@@ -1,0 +1,30 @@
+{
+  "name": "firs-app",
+  "version": "1.0.0",
+  "description": "primer node aplicacion",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franco646/node-firs-app.git"
+  },
+  "author": "frando dl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franco646/node-firs-app/issues"
+  },
+  "homepage": "https://github.com/franco646/node-firs-app#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql2": "^2.2.5"
+  }
+}

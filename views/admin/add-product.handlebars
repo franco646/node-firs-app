@@ -1,0 +1,24 @@
+    <main>
+        <form class="product-form" action="{{#if editionMode}}/admin/edit-product {{else}}/admin/add-product {{/if}}" method="POST">
+            <div class="form-control">
+                <label for="titulo">Title</label>
+                <input type="text" name="nombre" id="titulo" value="{{#if editionMode}}{{product.nombre}}{{/if}}">
+            </div>
+            <div class="form-control">
+                <label for="imagenUrl">Image URL</label>
+                <input type="text" name="imagenUrl" id="imagenUrl" value="{{#if editionMode}}{{product.imagenURL}}{{/if}}">
+            </div>
+            <div class="form-control">
+                <label for="precio">Price</label>
+                <input type="number" name="precio" id="precio" step="0.01" value="{{#if editionMode}}{{product.precio}}{{/if}}">
+            </div>
+            <div class="form-control">
+                <label for="description">Description</label>
+                <textarea name="descripcion" id="description" rows="5" >{{#if editionMode}}{{product.descripcion}}{{/if}}</textarea>
+            </div>
+            {{#if editionMode}}
+                <input type="hidden" name="productId" value="{{product.id}}">
+            {{/if}}
+            <button class="btn" type="submit">{{#if editionMode}} Edit product {{else}}Add Product {{/if}}</button>
+        </form>
+    </main>

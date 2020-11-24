@@ -1,0 +1,24 @@
+    <main>
+        {{#if hayProductos}}
+            <div class="grid">
+                {{#each products as |product|}}
+                    <article class="card product-item">
+                        <header class="card__header">
+                            <h1 class="product__title">{{product.nombre}}</h1>
+                        </header>
+                        <div class="card__image">
+                            <img src="{{product.imagenURL}}"
+                                alt="{{product.nombre}}">
+                        </div>
+                        <div class="card__content">
+                            <h2 class="product__price">${{product.precio}}</h2>
+                            <p class="product__description">{{product.descripcion}}</p>
+                        </div>
+                        {{>add-to-cart productId=product.id}}
+                    </article>
+                {{/each}}
+            </div>
+        {{else}}
+            <h1>No se encontraron productos</h1>
+        {{/if}}
+    </main>

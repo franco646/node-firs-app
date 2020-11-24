@@ -1,0 +1,10 @@
+<main class="centered">
+    <h1>{{product.nombre}}</h1>
+    <hr>
+    <div>
+        <img src="{{product.imagenURL}}" alt="{{product.nombre}}">
+    </div>
+    <h2>{{product.precio}}</h2>
+    <p>{{product.descripcion}}</p>
+    {{>add-to-cart productId=product.id}}
+</main>
