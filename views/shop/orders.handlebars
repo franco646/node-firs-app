@@ -1,3 +1,12 @@
-        <main>
-            <h1>Nothing there!</h1>
-        </main>
+{{#if hayProductos}}
+<ul>
+    {{#each orders as |order|}}
+        {{#each order.products as |product|}}
+        <l1>{{product.dataValues.nombre}}({{product.dataValues.orderItem.dataValues.cuenta}})</li>
+        {{/each}}
+        <li>({{order.products.dataValues.nombre}}){{order.dataValues.userId}}</li>
+    {{/each}}
+</ul>
+{{else}}
+<h1>No hay ningun producto en el carrito</h1>
+{{/if}}
